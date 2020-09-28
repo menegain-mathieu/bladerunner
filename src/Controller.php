@@ -128,7 +128,8 @@ class Controller
 
         $reflection = new \ReflectionClass($this);
         $fileName = basename($reflection->getFileName(), '.php');
-
+        $fileName = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', $fileName));
+        
         foreach (Container::current('config')['view']['paths'] as $path) {
             if (file_exists("{$path}/{$fileName}.blade.php")) {
                 return basename($path).".{$fileName}";
