@@ -116,11 +116,6 @@ class Controller
         return ($this->active ? $this->data : []);
     }
 
-    /**
-     * Return the views of the controller
-     *
-     * @return string
-     */
     public function __getView()
     {
         if (isset($this->template) && $this->template) {
@@ -134,14 +129,9 @@ class Controller
         $reflection = new \ReflectionClass($this);
         $fileName = basename($reflection->getFileName(), '.php');
 
-        $fileName = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', $fileName));
-
-        $config = Container::current('config');
-        if (!empty($config['view'])) {
-            foreach ($config['view']['paths'] as $path) {
-                if (file_exists("{$path}/{$fileName}.blade.php")) {
-                    return basename($path).".{$fileName}";
-                }
+        foreach (Container::current('config')['view']['paths'] as $path) {
+            if (file_exists("{$path}/{$fileName}.blade.php")) {
+                return basename($path).".{$fileName}";
             }
         }
 

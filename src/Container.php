@@ -20,7 +20,6 @@ class Container extends BaseContainer
         if (!$abstract) {
             return $container;
         }
-
         return $container->bound($abstract)
             ? $container->make($abstract, $parameters)
             : $container->make("bladerunner.{$abstract}", $parameters);

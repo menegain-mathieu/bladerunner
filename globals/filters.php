@@ -39,7 +39,6 @@ array_map(function ($type) {
                         if (!in_array($controllerPath, $heap)) {
                             $heap[] = $controllerPath;
                         }
-
                         return $heap;
                     });
                 }
@@ -61,7 +60,6 @@ array_map(function ($type) {
     'date',
     'home',
     'frontpage',
-    'front-page',
     'page',
     'paged',
     'search',

@@ -43,7 +43,7 @@ class Blade
         if (!$engineResolver) {
             $engineResolver = $this->app->make('view.engine.resolver');
         }
-
+        
         return $engineResolver->resolve('blade')->getCompiler();
     }
 
