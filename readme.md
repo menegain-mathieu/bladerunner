@@ -1,12 +1,5 @@
 # Bladerunner
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ekandreas/bladerunner)
-[![Build Status](https://travis-ci.org/ekandreas/bladerunner.svg?branch=master)](https://travis-ci.org/ekandreas/bladerunner)
-[![StyleCI](https://styleci.io/repos/48002506/shield)](https://styleci.io/repos/48002506)
-[![GitHub release](https://img.shields.io/github/release/ekandreas/bladerunner.svg)](http://bladerunner.aekab.se/bladerunner.zip)
-[![Twitter Follow](https://img.shields.io/twitter/follow/elseifab.svg?style=social)](https://twitter.com/intent/user?screen_name=elseifab)
-
-
 WordPress plugin for Laravel Blade templating.
 
 To install it to your Composer based WordPress installation:
