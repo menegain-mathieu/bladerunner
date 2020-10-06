@@ -1,13 +1,13 @@
 {
-    "name": "menegain/bladerunner",
+    "name": "revelateur/bladerunner",
     "type": "wordpress-plugin",
-    "description": "WordPress Blade L5 template engine",
+    "description": "WordPress Blade L5 template engine for starter with Wordplate",
     "keywords": ["laravel", "blade", "wordpress"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Mathieu Menegain",
-            "email": "mmenegain@revelateur.fr"
+            "name": "Agence Révélateur",
+            "email": "contact@revelateur.fr"
         }
     ],
     "require": {
