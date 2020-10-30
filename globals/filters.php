@@ -73,13 +73,16 @@ add_filter('template_include', function ($template) {
     if ($heap) {
         foreach ($heap as $controllerFile) {
             require_once $controllerFile;
-            $class = get_declared_classes();
-            $class = '\\' . end($class);
-            $controller = new $class();
-            if (is_subclass_of($class, "\\Bladerunner\\Controller") && $controller->__getView()) {
-                $controller->__setup();
-                echo view($controller->__getView(), $controller->__getData());
-                return null;
+            $allClass = get_declared_classes();
+            $nameFile = basename($controllerFile, '.php');
+            $class = 'App\\Controllers\\'.$nameFile;
+            if (in_array($class, $allClass)) {
+                $controller = new $class();
+                if (is_subclass_of($class, "\\Bladerunner\\Controller") && $controller->__getView()) {
+                    $controller->__setup();
+                    echo view($controller->__getView(), $controller->__getData());
+                    return null;
+                }
             }
         }
     }
