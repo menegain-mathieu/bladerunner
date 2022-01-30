@@ -1,5 +1,5 @@
 {
-    "name": "revelateur/bladerunner",
+    "name": "menegain-mathieu/bladerunner",
     "type": "wordpress-plugin",
     "description": "WordPress Blade L5 template engine for starter with Wordplate",
     "keywords": ["laravel", "blade", "wordpress"],
